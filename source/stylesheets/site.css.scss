@@ -2,66 +2,64 @@
 @import "normalize";
 
 body {
-  background: #ECC561;
+  padding:0 2%
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
   text-align: center;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1em;
-}
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+  }
+  h1 {
+    color: #000;
+    font-size: 35px;
 
-.logo img {
-  height: 18.75em;
-  margin-top: 6em;
-}
+    @media (min-width: 768px){
+      font-size: 45px;
 
-h1 {
-  color: rgba(0,0,0,0.5);
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.8em;
-  font-weight: 400;
-  margin: 0;
-}
+    }
+    @media (min-width: 992px){
+      font-size: 65px;
 
-.doc {
-  margin: 3em 0;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.1em;
-  font-weight: 300;
-
-  a {
-    border: 1px solid white;
-    border-radius: 3px;
-    padding: 0.75em 0.7em;
-    color: white;
-    text-decoration: none;
-    transition: color 0.1s linear;
-    &:hover {
-      background: rgba(0,0,0,0.2);
-      color: white;
-      transition: all 0.15s linear;
+    }
+    span {
+      color: #a41f20;
+      font-size: 70px;
+      @media (min-width: 768px){
+        font-size: 100px;
+      }
     }
   }
-}
-
-.welcome {
-  -webkit-animation-name: welcome;
-  -webkit-animation-duration: .9s;
-}
-
-@-webkit-keyframes welcome {
-  from {
-    -webkit-transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-   -webkit-transform: scale(0);
-   opacity: 0;
-  }
-  82.5% {
-    -webkit-transform: scale(1.03);
-    -webkit-animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: scale(1);
+  form {
+    max-width:400px;
+    margin: 0 auto;
+    .label {
+      text-align: left;
+      display: block;
+      margin:10px 0 2px 0;
+    }
+    input {
+      width: 98%;
+      height: 30px;
+      border: 1px solid #bfbfbf;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+      padding: 3px;
+    }
+    textarea {
+      @extend input;
+      height: 150px;
+    }
+    button {
+      @extend input;
+      width:100px;
+      float:right;
+      margin:10px 0;
+    }
   }
 }
