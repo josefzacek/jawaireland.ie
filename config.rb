@@ -34,6 +34,10 @@ end
 #   end
 # end
 
+activate :gh_pages do |gh_pages|
+  gh_pages.remote = 'git@github.com:josefzacek/jawaireland.ie.git'
+end
+
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
