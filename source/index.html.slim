@@ -1,3 +1,30 @@
 ---
+title: Welcome to Jawa Ireland
 ---
 
+.container
+  = image_tag 'jawa.jpg'
+
+  h1
+    | New site dedicated to
+    br
+
+    span JAWA
+
+    br
+     | motorbikes is coming soon!
+
+  h2 Want to know more?
+
+  = form_tag 'https://getsimpleform.com/messages?form_api_token=8a1414a224e622757559d5f523ebf0e8', :method => 'POST' do
+    - field_set_tag do
+      = label_tag :name, class: 'label'
+      .control = text_field_tag :name, name: "name", id: "name", placeholder: "Your name", autofocus: true, required: true, class: 'input'
+      = label_tag :email, class: 'label'
+      .control = email_field_tag :email, name: "email", id: "email", placeholder: "Your email", required: true, class: 'input'
+      = label_tag :message, class: 'label'
+      .control = text_area_tag :message, name: "message", id: "message", placeholder: "Your message", rows: 6, required: true, class: 'textarea'
+      button type="submit"
+       | Send
+
+  p &nbsp;
