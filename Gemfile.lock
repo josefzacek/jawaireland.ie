@@ -87,6 +87,7 @@ GEM
       servolux
       tilt (~> 2.0)
       uglifier (~> 3.0)
+    middleman-gh_pages (0.7.0)
     middleman-livereload (3.4.6)
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
@@ -133,6 +134,7 @@ PLATFORMS
 DEPENDENCIES
   middleman (>= 4.0.0)
   middleman-compass (>= 4.0.0)
+  middleman-gh_pages
   middleman-livereload
   middleman-sprockets (>= 4.0.0)
   slim (>= 3.0)
