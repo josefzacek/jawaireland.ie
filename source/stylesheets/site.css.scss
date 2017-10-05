@@ -1,7 +1,9 @@
 @charset "utf-8";
 @import "normalize";
 
-
+body {
+  padding:0 2%
+}
 
 .container {
   max-width: 1400px;
@@ -15,16 +17,14 @@
   h1 {
     color: #000;
     font-size: 35px;
-    position: relative;
-    top: -30px;
 
     @media (min-width: 768px){
       font-size: 45px;
-      top: -55px;
+
     }
     @media (min-width: 992px){
       font-size: 65px;
-          top: -60px;
+
     }
     span {
       color: #a41f20;
@@ -32,6 +32,34 @@
       @media (min-width: 768px){
         font-size: 100px;
       }
+    }
+  }
+  form {
+    max-width:400px;
+    margin: 0 auto;
+    .label {
+      text-align: left;
+      display: block;
+      margin:10px 0 2px 0;
+    }
+    input {
+      width: 98%;
+      height: 30px;
+      border: 1px solid #bfbfbf;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+      padding: 3px;
+    }
+    textarea {
+      @extend input;
+      height: 150px;
+    }
+    button {
+      @extend input;
+      width:100px;
+      float:right;
+      margin:10px 0;
     }
   }
 }
