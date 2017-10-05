@@ -38,6 +38,10 @@ activate :gh_pages do |gh_pages|
   gh_pages.remote = 'git@github.com:josefzacek/jawaireland.ie.git'
 end
 
+# Use relative URLs
+activate :relative_assets
+set :relative_links, true
+
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
