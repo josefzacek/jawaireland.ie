@@ -3,7 +3,35 @@
 
 
 
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
   }
+  h1 {
+    color: #000;
+    font-size: 35px;
+    position: relative;
+    top: -30px;
 
+    @media (min-width: 768px){
+      font-size: 45px;
+      top: -55px;
+    }
+    @media (min-width: 992px){
+      font-size: 65px;
+          top: -60px;
+    }
+    span {
+      color: #a41f20;
+      font-size: 70px;
+      @media (min-width: 768px){
+        font-size: 100px;
+      }
+    }
   }
 }
