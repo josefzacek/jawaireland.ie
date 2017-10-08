@@ -11,6 +11,12 @@ html
 
     == stylesheet_link_tag :site
     == javascript_include_tag  "all"
+    == javascript_include_tag "https://www.googletagmanager.com/gtag/js?id=UA-107716154-1", async: true
+    javascript:
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-107716154-1');
 
   body class="#{page_classes}"
     == yield
