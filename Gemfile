@@ -16,3 +16,5 @@ gem 'middleman-compass', '>= 4.0.0'
 gem 'middleman', '>= 4.0.0'
 gem 'middleman-livereload'
 gem 'middleman-gh_pages'
+
+gem 'bootstrap', '~> 4.0.0.alpha6'

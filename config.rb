@@ -34,6 +34,9 @@ end
 #   end
 # end
 
+# activate Sprockets to compile js
+activate :sprockets
+
 activate :gh_pages do |gh_pages|
   gh_pages.remote = 'git@github.com:josefzacek/jawaireland.ie.git'
 end
