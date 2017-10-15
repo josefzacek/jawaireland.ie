@@ -16,6 +16,9 @@ body {
   h1 {
     color: #000;
     font-size: 35px;
+@import "bootstrap/functions";
+@import "variables";
+@import "bootstrap";
 
     @media (min-width: 768px){
       font-size: 45px;
