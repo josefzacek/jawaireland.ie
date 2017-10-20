@@ -1,0 +1,42 @@
+---
+title: Contact Jawa Ireland
+---
+
+.container-fluid
+
+  p &nbsp;
+  .row
+    .col-lg-12
+      h1.text-center.text-primary
+        | Contact us
+      p.text-center
+        | Got a question? I’d love to hear from you.
+        br
+      	| Send me a message and I’ll respond as soon as possible.
+
+  .row
+    .col-md-5.ml-md-5
+      = form_tag 'https://getsimpleform.com/messages?form_api_token=8a1414a224e622757559d5f523ebf0e8', :method => 'post' do
+        - field_set_tag do
+          = hidden_field_tag 'redirect_to', value: 'https://www.jawaireland.ie/thank-you'
+          .form-group
+            = label_tag :name, class: 'label'
+            = text_field_tag :name, name: "name", id: "name", placeholder: "Name *", required: true, class: 'form-control'
+          .form-group
+            = label_tag :email, class: 'label'
+            = email_field_tag :email, name: "email", id: "email", placeholder: "Email address *", required: true, class: 'form-control'
+          .form-group
+            = label_tag :phone, class: 'label'
+            = text_field_tag :phone, name: "phone", id: "email", placeholder: "Phone number", class: 'form-control'
+          .form-group
+            = label_tag :message, class: 'label'
+            = text_area_tag :message, name: "message", id: "message", placeholder: "Message *", rows: 6, required: true, class: 'form-control'
+          button.btn.btn-outline-primary.btn-block type="submit"
+            | Send
+            = ' '
+            i.fa.fa-paper-plane
+
+      p &nbsp;
+
+    .col-md-5.ml-auto.mr-md-5.align-self-center.d-none.d-md-block
+      = image_tag 'jawa-biker-poster.png', class: 'img-fluid d-block mx-auto'
