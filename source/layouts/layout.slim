@@ -19,6 +19,9 @@ html lang="en"
 
     = partial "layouts/header"
 
+    - if content_for?(:home_page_video)
+      = yield_content(:home_page_video)
+
     == yield
 
     = partial "layouts/footer"
