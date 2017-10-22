@@ -2,6 +2,22 @@
 title: Welcome to Jawa Ireland
 ---
 
+- content_for :home_page_video do
+  .video-wrapper
+    .video-description.text-center
+      h1.video-title
+        span Welcome to Jawa Ireland,
+        br
+        span the site dedicated to
+        br
+        span.text-primary JAWA
+        br
+        span motorbikes
+    .video-container
+      video.home-page-video autoplay="" loop="" width="100%"
+        source src="images/jawa-rider.mp4" type="video/mp4"
+        source src="images/jawa-rider.webm" type="video/webm"
+
 .container-fluid
   .row.justify-content-md-center
     .col-md-6
