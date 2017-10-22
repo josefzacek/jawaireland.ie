@@ -4,6 +4,10 @@
 @import "variables";
 @import "bootstrap";
 
+button {
+  cursor: pointer;
+}
+
 // home page video
 .video-wrapper {
   position: relative;

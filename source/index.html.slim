@@ -31,24 +31,6 @@ title: Welcome to Jawa Ireland
       h1.display-4.text-primary.text-center JAWA
 
       h2.text-center
-         | motorbikes is coming soon!
+        | motorbikes is coming soon!
 
-  .row.justify-content-md-center
-    .col-md-6.col-lg-5
-      h2.text-center Want to know more?
-
-      = form_tag 'https://getsimpleform.com/messages?form_api_token=8a1414a224e622757559d5f523ebf0e8', :method => 'POST' do
-        - field_set_tag do
-          .form-group
-            = label_tag :name, class: 'label'
-            = text_field_tag :name, name: "name", id: "name", placeholder: "Your name", required: true, class: 'form-control'
-          .form-group
-            = label_tag :email, class: 'label'
-            = email_field_tag :email, name: "email", id: "email", placeholder: "Your email", required: true, class: 'form-control'
-          .form-group
-            = label_tag :message, class: 'label'
-            = text_area_tag :message, name: "message", id: "message", placeholder: "Your message", rows: 6, required: true, class: 'form-control'
-          button.btn type="submit"
-           | Send
-
-          p &nbsp;
+      p &nbsp;
