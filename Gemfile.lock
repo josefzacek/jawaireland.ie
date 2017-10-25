@@ -8,9 +8,9 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
-    autoprefixer-rails (7.1.5)
+    autoprefixer-rails (7.1.6)
       execjs
-    backports (3.8.0)
+    backports (3.10.3)
     bootstrap (4.0.0.beta)
       autoprefixer-rails (>= 6.0.3)
       popper_js (~> 1.11.1)
@@ -44,7 +44,7 @@ GEM
     fast_blank (1.0.0)
     fastimage (2.1.0)
     ffi (1.9.18)
-    haml (5.0.3)
+    haml (5.0.4)
       temple (>= 0.8.0)
       tilt
     hamster (3.0.0)
@@ -139,15 +139,15 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap (~> 4.0.0.alpha6)
-  middleman (>= 4.0.0)
-  middleman-compass (>= 4.0.0)
-  middleman-gh_pages
-  middleman-livereload
-  middleman-sprockets (>= 4.0.0)
+  bootstrap (~> 4.0.0.beta)
+  middleman (~> 4.2, >= 4.2.1)
+  middleman-compass (~> 4.0, >= 4.0.1)
+  middleman-gh_pages (~> 0.7.0)
+  middleman-livereload (~> 3.4, >= 3.4.6)
+  middleman-sprockets (~> 4.1, >= 4.1.1)
   slim (>= 3.0)
   tzinfo-data
   wdm (~> 0.1.0)
 
 BUNDLED WITH
-   1.16.0.pre.2
+   1.16.0.pre.3
