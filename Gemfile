@@ -11,10 +11,11 @@ gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
 gem 'tzinfo-data', platforms: [:mswin, :mingw]
 
 # Middleman Gems
-gem 'middleman-sprockets', '>= 4.0.0'
-gem 'middleman-compass', '>= 4.0.0'
-gem 'middleman', '>= 4.0.0'
-gem 'middleman-livereload'
-gem 'middleman-gh_pages'
+gem 'middleman-sprockets', '~> 4.1', '>= 4.1.1'
+gem 'middleman-compass', '~> 4.0', '>= 4.0.1'
+gem 'middleman', '~> 4.2', '>= 4.2.1'
+gem 'middleman-livereload', '~> 3.4', '>= 3.4.6'
 
-gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'middleman-gh_pages', '~> 0.7.0'
+
+gem 'bootstrap', '~> 4.0.0.beta'
