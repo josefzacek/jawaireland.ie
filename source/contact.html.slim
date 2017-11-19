@@ -15,7 +15,7 @@ title: Contact Jawa Ireland
       	| Send me a message and I’ll respond as soon as possible.
 
   .row
-    .col-md-5.ml-md-5
+    .col-sm-8.col-md-8.col-lg-6.mx-auto
       = form_tag 'https://getsimpleform.com/messages?form_api_token=8a1414a224e622757559d5f523ebf0e8', :method => 'post' do
         - field_set_tag do
           = hidden_field_tag 'redirect_to', value: 'https://www.jawaireland.ie/thank-you'
@@ -37,6 +37,3 @@ title: Contact Jawa Ireland
             i.fa.fa-paper-plane
 
       p &nbsp;
-
-    .col-md-5.ml-auto.mr-md-5.align-self-center.d-none.d-md-block
-      = image_tag 'jawa-biker-poster.png', class: 'img-fluid d-block mx-auto'
