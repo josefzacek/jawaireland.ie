@@ -10,7 +10,7 @@ $( document ).ready(function() {
   // leaflet map on contact page
   var map = L.map('leaflet-map').setView([53.349729, -6.260631], 11);
 
-  L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
 
