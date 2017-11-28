@@ -1,0 +1,22 @@
+---
+title: JAWA motorbikes vintage posters
+---
+
+.container-fluid
+
+  p &nbsp;
+  .row
+    .col-lg-12
+      h1.text-center
+        span.text-primary> JAWA
+        | motorbikes
+        br
+        | vintage posters
+
+      p &nbsp;
+
+      .card-columns
+
+        - Dir.glob("source/images/posters/*.jpg") do |img|
+          .card
+            = image_tag "posters/#{img.split('/').last}", class: 'img-fluid', alt: img.split('/').last().gsub('-', ' ').sub('.jpg','').capitalize.gsub(/jawa|Jawa/, 'JAWA')
