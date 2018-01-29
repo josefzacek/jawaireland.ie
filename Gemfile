@@ -8,7 +8,7 @@ gem 'slim', '~> 3.0', '>= 3.0.9'
 gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
 
 # windows does not come with time zone data
-gem 'tzinfo-data', platforms: [:mswin, :mingw]
+gem 'tzinfo-data', '~> 1.2018', '>= 1.2018.3', platforms: [:mswin, :mingw]
 
 # Middleman Gems
 gem 'middleman-sprockets', '~> 4.1', '>= 4.1.1'
