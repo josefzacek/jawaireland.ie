@@ -8,6 +8,8 @@ html lang="en"
     meta name="author" content="Josef Zacek"
     - if current_page.data.keywords
       meta name="keywords" content=current_page.data.keywords
+    - if current_page.data.description
+      meta name="description" content=current_page.data.description
 
     = favicon_tag 'favicon.ico'
     = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css'
