@@ -43,6 +43,12 @@ activate :sprockets
 activate :relative_assets
 set :relative_links, true
 
+# deployment
+activate :deploy do |deploy|
+  deploy.deploy_method = :git
+  deploy.build_before = true
+end
+
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
