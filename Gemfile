@@ -11,9 +11,9 @@ gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
 gem 'tzinfo-data', '~> 1.2018', '>= 1.2018.3', platforms: [:mswin, :mingw]
 
 # Middleman Gems
-gem 'middleman-sprockets', '~> 4.1', '>= 4.1.1'
-gem 'middleman-compass', '~> 4.0', '>= 4.0.1'
-gem 'middleman', '~> 4.2', '>= 4.2.1'
-gem 'middleman-livereload', '~> 3.4', '>= 3.4.6'
-gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 gem 'bootstrap', '~> 4.0.0.beta'
+gem 'middleman', '~> 4.2', '>= 4.2.1'
+gem 'middleman-compass', '~> 4.0', '>= 4.0.1'
+gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
+gem 'middleman-livereload', '~> 3.4', '>= 3.4.6'
+gem 'middleman-sprockets', '~> 4.1', '>= 4.1.1'
