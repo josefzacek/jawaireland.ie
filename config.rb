@@ -39,13 +39,15 @@ end
 # activate Sprockets to compile js
 activate :sprockets
 
-activate :gh_pages do |gh_pages|
-  gh_pages.remote = 'git@github.com:josefzacek/jawaireland.ie.git'
-end
-
 # Use relative URLs
 activate :relative_assets
 set :relative_links, true
+
+# deployment
+activate :deploy do |deploy|
+  deploy.deploy_method = :git
+  deploy.build_before = true
+end
 
 # Build-specific configuration
 configure :build do
