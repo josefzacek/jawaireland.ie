@@ -13,7 +13,5 @@ Live version available at https://www.jawaireland.ie
 ### Deployment
 
 ```
-middleman gh_pages
+middleman deploy
 ```
-
-After deployment switch to `gh-pages` branch in GitHub and re-create `CNAME` file containing `www.jawaireland.ie` as existing one gets deleted by deployment.
