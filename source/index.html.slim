@@ -24,6 +24,19 @@ description: Welcome to Jawa Ireland, a site dedicated to JAWA motorbikes contai
   .row
     .col-lg-12
       h2.text-center
-        | More content coming soon
+        | Do you need
+        span.text-primary<>
+          b JAWA
+        | spare parts?
+
+      p.text-center
+        | Email:
+        = " "
+        = mail_to 'info@jawaireland.ie', "info@jawaireland.ie"
+
+        p.text-center
+          | Phone:
+          = " "
+          = link_to '+353 870525927', 'tel:+353870525927'
 
       p &nbsp;
