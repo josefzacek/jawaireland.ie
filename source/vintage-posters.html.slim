@@ -14,9 +14,4 @@ title: JAWA motorbikes vintage posters
 
       p &nbsp;
 
-      .card-columns
 
-        - Dir.glob("source/images/posters/*.jpg") do |img|
-          .card
-            = link_to "../images/posters/#{img.split('/').last}", data: { lightbox: 'vintage-posters', title: img.split('/').last().gsub('-', ' ').sub('.jpg','').capitalize.gsub(/jawa|Jawa/, 'JAWA')}
-              = image_tag "posters/#{img.split('/').last}", class: 'img-fluid d-block mx-auto', alt: img.split('/').last().gsub('-', ' ').sub('.jpg','').capitalize.gsub(/jawa|Jawa/, 'JAWA')
