@@ -25,16 +25,20 @@ title: Contact Jawa Ireland
         - field_set_tag do
           = hidden_field_tag 'redirect_to', value: 'https://www.jawaireland.ie/thank-you'
           .form-group
-            = label_tag :name, class: 'label'
+            b
+              = label_tag :name, class: 'label'
             = text_field_tag :name, name: "name", id: "name", placeholder: "Name *", required: true, class: 'form-control'
           .form-group
-            = label_tag :email, class: 'label'
+            b
+              = label_tag :email, class: 'label'
             = email_field_tag :email, name: "email", id: "email", placeholder: "Email address *", required: true, class: 'form-control'
           .form-group
-            = label_tag :phone, class: 'label'
+            b
+              = label_tag :phone, class: 'label'
             = text_field_tag :phone, name: "phone", id: "email", placeholder: "Phone number", class: 'form-control'
           .form-group
-            = label_tag :message, class: 'label'
+            b
+              = label_tag :message, class: 'label'
             = text_area_tag :message, name: "message", id: "message", placeholder: "Message *", rows: 6, required: true, class: 'form-control'
           button.btn.btn-outline-primary.float-right type="submit"
             | Send
