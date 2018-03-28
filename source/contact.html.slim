@@ -21,6 +21,19 @@ title: Contact Jawa Ireland
 
   .row
     .col-lg-4
+      p
+        b
+          | Email:
+        br
+        = mail_to 'info@jawaireland.ie', "info@jawaireland.ie"
+
+      p
+        b
+          | Phone:
+        br
+        = link_to '+353 870525927', 'tel:+353870525927'
+      br
+
     .col-lg-8
       = form_tag 'https://getsimpleform.com/messages?form_api_token=8a1414a224e622757559d5f523ebf0e8', :method => 'post' do
         - field_set_tag do
