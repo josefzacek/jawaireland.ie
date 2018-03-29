@@ -66,6 +66,25 @@ button {
         clear: both;
       }
 
+      &:nth-child(even) {
+        .timeline-panel {
+          float: right;
+
+          &:before {
+            border-left-width: 0;
+            border-right-width: 15px;
+            left: -15px;
+            right: auto;
+          }
+          &:after {
+            border-left-width: 0;
+            border-right-width: 14px;
+            left: -14px;
+            right: auto;
+          }
+        }
+      }
+
       > .timeline-panel {
         width: 46%;
         float: left;
@@ -109,26 +128,6 @@ button {
           border-bottom: 14px solid transparent;
           content: " ";
           @include media-breakpoint-down(md) {
-            border-left-width: 0;
-            border-right-width: 14px;
-            left: -14px;
-            right: auto;
-          }
-        }
-      }
-
-      &.timeline-inverted {
-
-        > .timeline-panel {
-          float: right;
-
-          &:before {
-            border-left-width: 0;
-            border-right-width: 15px;
-            left: -15px;
-            right: auto;
-          }
-          &:after {
             border-left-width: 0;
             border-right-width: 14px;
             left: -14px;
