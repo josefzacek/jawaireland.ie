@@ -21,4 +21,6 @@ $( document ).ready(function() {
     map.scrollWheelZoom.disable();
   }
 
+  // history timeline animation
+  var $timeline_item = $('.history-timeline ul.timeline > li');
 });
