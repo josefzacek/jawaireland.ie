@@ -30,4 +30,14 @@ $( document ).ready(function() {
       $(this).find('.timeline-panel').addClass('invisible');
     }
   });
+
+  //show timeline blocks as user scrolls down
+  $(window).on('scroll', function() {
+    $timeline_item.each(function() {
+      if ($(this).offset().top <= $(window).scrollTop() + $(window).height() * 0.75 && $(this).find('.timeline-panel').hasClass('invisible')) {
+        $(this).find('.timeline-panel').removeClass('invisible');
+      }
+    });
+  });
+
 });
