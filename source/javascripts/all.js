@@ -23,4 +23,11 @@ $( document ).ready(function() {
 
   // history timeline animation
   var $timeline_item = $('.history-timeline ul.timeline > li');
+
+  //hide timeline blocks which are outside the viewport
+  $timeline_item.each(function() {
+    if ($(this).offset().top > $(window).scrollTop() + $(window).height() * 1) {
+      $(this).find('.timeline-panel').addClass('invisible');
+    }
+  });
 });
