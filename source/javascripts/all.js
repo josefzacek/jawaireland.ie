@@ -21,6 +21,25 @@ $( document ).ready(function() {
     map.scrollWheelZoom.disable();
   }
 
+  // history timeline animation
+  var $timeline_item = $('.history-timeline ul.timeline > li');
+
+  //hide timeline blocks which are outside the viewport
+  $timeline_item.each(function() {
+    if ($(this).offset().top > $(window).scrollTop() + $(window).height() * 1) {
+      $(this).find('.timeline-panel').addClass('invisible');
+    }
+  });
+
+  //show timeline blocks as user scrolls down
+  $(window).on('scroll', function() {
+    $timeline_item.each(function() {
+      if ($(this).offset().top <= $(window).scrollTop() + $(window).height() * 0.75 && $(this).find('.timeline-panel').hasClass('invisible')) {
+        $(this).find('.timeline-panel').removeClass('invisible');
+      }
+    });
+  });
+
 });
 
 /* Light YouTube Embeds by @labnol on videos page */
