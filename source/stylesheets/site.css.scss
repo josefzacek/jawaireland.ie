@@ -173,7 +173,7 @@ button {
 }
 
 // posters page
-.vintage-posters {
+[class^="vintage-posters"] {  // get all starting with .vintage-posters
 
   .masonry-grid {
     max-width: 1140px;
