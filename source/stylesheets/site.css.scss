@@ -175,19 +175,9 @@ button {
 // posters page
 .vintage-posters {
 
-  .card-columns {
-    column-count: 2;
-    @include media-breakpoint-up(sm) {
-      column-count: 3;
     }
-    @include media-breakpoint-up(lg) {
-      column-count: 4;
     }
 
-    .card {
-      display: inline-block;
-      a {
-        cursor: zoom-in;
       }
     }
   }
