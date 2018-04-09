@@ -1,7 +1,5 @@
 ---
 title: JAWA motorbikes vintage posters
-keywords: jawa posters, jawa motorbikes posters, jawa motorbikes ireland posters, jawa ireland posters, jawa vintage posters
-description: Jawa ireland motorbikes page containg collection of vintage posters related to Jawa motorbikes.
 ---
 
 .container
@@ -20,7 +18,7 @@ description: Jawa ireland motorbikes page containg collection of vintage posters
     .grid__col-sizer
     .grid__gutter-sizer
     - images = Dir.glob("source/images/posters/*.jpg")
-    - images[0..10].each do |img|
+    - images[11..50].each do |img|
       .grid__item
         = link_to "../images/posters/#{img.split('/').last}", data: { lightbox: 'vintage-posters', title: img.split('/').last().gsub('-', ' ').sub('.jpg','').capitalize.gsub(/jawa|Jawa/, 'JAWA')}
           = image_tag "posters/#{img.split('/').last}", class: 'image-grid__image', alt: img.split('/').last().gsub('-', ' ').sub('.jpg','').capitalize.gsub(/jawa|Jawa/, 'JAWA')
@@ -36,9 +34,5 @@ description: Jawa ireland motorbikes page containg collection of vintage posters
       | End of content
     p.infinite-scroll-error
       | No more pages to load
-
-    p.pagination
-      a.pagination__next href="vintage-posters-page-1"
-        | Next page
 
 <div style="clear:both"></div>
