@@ -175,9 +175,30 @@ button {
 // posters page
 .vintage-posters {
 
-    }
+  .masonry-grid {
+    max-width: 1140px;
+
+    &.are-images-unloaded {
+      opacity: 0;
     }
 
+    .grid__col-sizer {
+      width: 32%;
+    }
+
+    .grid__gutter-sizer {
+      width: 2%;
+    }
+
+    .grid__item {
+      width: 32%;
+      margin-bottom: 20px;
+      float: left;
+
+      img {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
       }
     }
   }
