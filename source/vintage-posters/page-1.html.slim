@@ -23,16 +23,6 @@ title: JAWA motorbikes vintage posters
         = link_to "../images/posters/#{img.split('/').last}", data: { lightbox: 'vintage-posters', title: img.split('/').last().gsub('-', ' ').sub('.jpg','').capitalize.gsub(/jawa|Jawa/, 'JAWA')}
           = image_tag "posters/#{img.split('/').last}", class: 'image-grid__image', alt: img.split('/').last().gsub('-', ' ').sub('.jpg','').capitalize.gsub(/jawa|Jawa/, 'JAWA')
 
-  .page-load-status.text-center.pt-3.text-secondary
-    .loader-ellips.infinite-scroll-request
-      span.loader-ellips__dot
-      span.loader-ellips__dot
-      span.loader-ellips__dot
-      span.loader-ellips__dot
-
-    p.infinite-scroll-last
-      | End of content
-    p.infinite-scroll-error
-      | No more pages to load
+  = partial "vintage-posters/_page_load_status"
 
 .clearfix
