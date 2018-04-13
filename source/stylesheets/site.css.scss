@@ -223,12 +223,6 @@ button {
       height: 1em;
       margin: 10px auto;
 
-.loader-ellips__dot:nth-child(1),
-.loader-ellips__dot:nth-child(2) {
-  left: 0;
-}
-.loader-ellips__dot:nth-child(3) { left: 1.5em; }
-.loader-ellips__dot:nth-child(4) { left: 3em; }
       .loader-ellips__dot {
         display: block;
         width: 1em;
@@ -239,6 +233,16 @@ button {
         animation-duration: 0.5s;
         animation-timing-function: ease;
         animation-iteration-count: infinite;
+      }
+      .loader-ellips__dot:nth-child(1),
+      .loader-ellips__dot:nth-child(2) {
+        left: 0;
+      }
+      .loader-ellips__dot:nth-child(3) {
+        left: 1.5em;
+      }
+      .loader-ellips__dot:nth-child(4) {
+        left: 3em;
       }
 
 @keyframes reveal {
