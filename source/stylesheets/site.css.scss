@@ -213,13 +213,6 @@ button {
 
 
 
-.page-load-status {
-  display: none; /* hidden by default */
-  padding-top: 20px;
-  border-top: 1px solid #DDD;
-  text-align: center;
-  color: #777;
-}
 
 /* loader ellips in separate pen CSS */
 .loader-ellips {
@@ -229,6 +222,8 @@ button {
   height: 1em;
   margin: 10px auto;
 }
+  .page-load-status {
+    display: none; /* hidden by default - not possible to use BTS class */
 
 .loader-ellips__dot {
   display: block;
