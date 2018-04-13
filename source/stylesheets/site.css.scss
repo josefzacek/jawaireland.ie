@@ -216,17 +216,6 @@ button {
   .page-load-status {
     display: none; /* hidden by default - not possible to use BTS class */
 
-.loader-ellips__dot {
-  display: block;
-  width: 1em;
-  height: 1em;
-  border-radius: 0.5em;
-  background: #555; /* change color here */
-  position: absolute;
-  animation-duration: 0.5s;
-  animation-timing-function: ease;
-  animation-iteration-count: infinite;
-}
     .loader-ellips {
       font-size: 15px; /* change size here */
       position: relative;
@@ -240,6 +229,17 @@ button {
 }
 .loader-ellips__dot:nth-child(3) { left: 1.5em; }
 .loader-ellips__dot:nth-child(4) { left: 3em; }
+      .loader-ellips__dot {
+        display: block;
+        width: 1em;
+        height: 1em;
+        border-radius: 0.5em;
+        background: $gray-400; /* change color here */
+        position: absolute;
+        animation-duration: 0.5s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+      }
 
 @keyframes reveal {
   from { transform: scale(0.001); }
