@@ -10,6 +10,8 @@ html lang="en"
       meta name="keywords" content=current_page.data.keywords
     - if current_page.data.description
       meta name="description" content=current_page.data.description
+    - if current_page.data.robots
+      meta name="robots" content=current_page.data.robots
 
     = favicon_tag 'favicon.ico'
     = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css'
