@@ -1,2 +1,4 @@
 User-agent: *
 Disallow: /thank-you
+Disallow: /vintage-posters/page-1
+Disallow: /vintage-posters/page-2
