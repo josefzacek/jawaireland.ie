@@ -11,3 +11,10 @@ title: JAWA motorbikes videos
     | Motorbikes Videos
 
   br
+  .row
+    - videos.each do |id,description|
+      .col-sm-6.col-md-4
+        .embed-responsive.embed-responsive-16by9
+          .embed-responsive-item.videos-page-youtube-video data-id="#{id}"
+        p.text-center
+          = description
