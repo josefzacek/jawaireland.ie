@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded",
 
 function labnolThumb(id) {
   var thumb = '<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg">',
-    play = '<div class="play"></div>';
+    play = '<div class="play-button"></div>';
   return thumb.replace("ID", id) + play;
 }
 
