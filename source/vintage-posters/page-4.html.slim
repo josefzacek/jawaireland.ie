@@ -19,20 +19,11 @@ robots: noindex
     .grid__col-sizer
     .grid__gutter-sizer
     - images = Dir.glob("source/images/posters/*.jpg")
-    - images[17..22].each do |img|
+    - images[29..50].each do |img|
       .grid__item
         = link_to "../images/posters/#{img.split('/').last}", data: { lightbox: 'vintage-posters', title: img.split('/').last().gsub('-', ' ').sub('.jpg','').capitalize.gsub(/jawa|Jawa/, 'JAWA')}
           = image_tag "posters/#{img.split('/').last}", class: 'image-grid__image', alt: img.split('/').last().gsub('-', ' ').sub('.jpg','').capitalize.gsub(/jawa|Jawa/, 'JAWA')
 
   = partial "vintage-posters/_page_load_status"
-
-  p.pagination.w-100
-    - if development?
-      a.pagination__next href="vintage-posters/page-3/"
-        | Next page
-
-    - if build?
-      a.pagination__next href="https://www.jawaireland.ie/vintage-posters/page-3/"
-        | Next page
 
 .clearfix
