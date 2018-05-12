@@ -39,6 +39,8 @@ end
 # activate Sprockets to compile js
 activate :sprockets
 
+page '/404.html', directory_index: false
+
 # Use relative URLs
 activate :relative_assets
 set :relative_links, true
