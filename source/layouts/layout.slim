@@ -16,7 +16,10 @@ html lang="en"
     = favicon_tag 'https://www.jawaireland.ie/images/favicon.ico'
     = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css'
     = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css'
-    == stylesheet_link_tag :site
+    - if build?
+      == stylesheet_link_tag  "https://www.jawaireland.ie/stylesheets/site.css"
+    - else
+      == stylesheet_link_tag :site
 
     - if build?
       == javascript_include_tag "https://www.googletagmanager.com/gtag/js?id=UA-107716154-1", async: true
