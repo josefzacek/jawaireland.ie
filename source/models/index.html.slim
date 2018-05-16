@@ -36,7 +36,11 @@ title: JAWA motorbikes models
             img.card-img-top.border.border-left-0.border-right-0.border-top-0 src="#{model[:image_url]}" alt="#{model[:title]}"
               .card-body.d-flex.flex-column.justify-content-end
                 p.mb-0
-                  = model[:title]
-                small
-                  | Details page coming soon
-                  //= link_to "Read more ...", "models/#{model[:title].gsub(' ','-')}", title: "#{model[:title]}"
+                  small
+                    b>
+                      | Model:
+                    = model[:title]
+                p.mb-0.text-secondary
+                  small
+                    | Details page coming soon
+                    //= link_to "Read more ...", "models/#{model[:title].gsub(' ','-')}", title: "#{model[:title]}"
