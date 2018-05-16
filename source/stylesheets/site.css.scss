@@ -266,3 +266,45 @@ button {
     }
   }
 }
+
+
+// videos page
+.videos {
+  .videos-page-youtube-video {
+    img {
+      bottom: 0;
+      display: block;
+      left: 0;
+      margin: auto;
+      max-width: 100%;
+      width: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      border: none;
+      height: auto;
+      cursor: pointer;
+      -webkit-transition: .4s all;
+      -moz-transition: .4s all;
+      transition: .4s all;
+
+      &:hover {
+        -webkit-filter: brightness(75%);
+      }
+    }
+
+    .play-button {
+      height: 60px;
+      width: 60px;
+      left: 50%;
+      top: 50%;
+      margin-left: -30px;
+      margin-top: -30px;
+      position: absolute;
+      background: url(../images/play-button.png);
+      background-repeat: no-repeat;
+      cursor: pointer;
+      background-size: 60px;
+    }
+  }
+}

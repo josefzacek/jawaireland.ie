@@ -1,0 +1,28 @@
+---
+title: JAWA motorbikes videos
+---
+
+.container
+  p &nbsp;
+
+  h1
+    b
+      span.text-primary> JAWA
+    | Motorbikes Videos
+
+  br
+
+  - videos = { 'E3h3242ptjQ' => 'JAWA 500 OHV',
+              'yQsjGHjmwFg' => 'JAWA 175 Villiers',
+              'nJMzNx9dwKM' => 'JAWA 250 Pérák',
+              'yusGfWo0-JQ' => 'JAWA 350 Bizon',
+              'mv7ujV90Pm0' => 'JAWA Stadion S11',
+              }
+
+  .row
+    - videos.each do |id,description|
+      .col-sm-6.col-md-4.mb-3
+        .embed-responsive.embed-responsive-16by9
+          .embed-responsive-item.videos-page-youtube-video data-id="#{id}"
+        small.text-muted
+          = description

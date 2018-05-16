@@ -3,3 +3,4 @@ Disallow: /thank-you
 Disallow: /vintage-posters/page-1
 Disallow: /vintage-posters/page-2
 Disallow: /vintage-posters/page-3
+Disallow: /vintage-posters/page-4
