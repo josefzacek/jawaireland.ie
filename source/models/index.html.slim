@@ -27,25 +27,25 @@ title: JAWA motorbikes models
         small
           b>
             | Please note:
-          | Page is under construction, some models might be missing.
+          | Page is under construction, some models are missing.
 
   .row
     - @models.each do |model|
       .col-md-4.col-sm-6.mb-4
         .card.h-100.border-primary
-            img.card-img-top.border.border-left-0.border-right-0.border-top-0 src="#{model[:image_url]}" alt="#{model[:title]}"
-              .card-body.d-flex.flex-column.justify-content-end
-                p.mb-0
-                  small
-                    b>
-                      | Model:
-                    = model[:title]
-                p.mb-0
-                  small
-                    b>
-                      | Manufacture year:
-                    = model[:manufacture_year]
-                p.mb-0.text-secondary
-                  small
-                    | Details page coming soon
-                    //= link_to "Read more ...", "/models/#{model[:title].gsub(' ','-').downcase}", title: "#{model[:title]}"
+            = image_tag "/images/models/#{model[:image_url]}", alt: "#{model[:title]}", class: "card-img-top border border-left-0 border-right-0 border-top-0"
+            .card-body.d-flex.flex-column.justify-content-end
+              p.mb-0
+                small
+                  b>
+                    | Model:
+                  = model[:title]
+              p.mb-0
+                small
+                  b>
+                    | Manufacture year:
+                  = model[:manufacture_year]
+              p.mb-0.text-secondary
+                small
+                  | Details page coming soon
+                  //= link_to "Read more ...", "/models/#{model[:title].gsub(' ','-').downcase}", title: "#{model[:title]}"
