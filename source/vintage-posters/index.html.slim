@@ -16,10 +16,10 @@ description: Jawa ireland motorbikes page containg collection of vintage posters
 
       p &nbsp;
 
+      - vintage_posters = Dir.glob("source/images/posters/*.jpg")
   .masonry-grid.are-images-unloaded
     .grid__col-sizer
     .grid__gutter-sizer
-    - images = Dir.glob("source/images/posters/*.jpg")
     - vintage_posters[0..10].each do |img|
       .grid__item
         = link_to "../images/posters/#{img.split('/').last}", data: { lightbox: 'vintage-posters', title: img.split('/').last().gsub('-', ' ').sub('.jpg','').capitalize.gsub(/jawa|Jawa/, 'JAWA')}
