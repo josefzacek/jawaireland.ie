@@ -18,8 +18,8 @@ robots: noindex
   .masonry-grid.are-images-unloaded
     .grid__col-sizer
     .grid__gutter-sizer
-    - images = Dir.glob("source/images/posters/*.jpg")
-    - images[23..28].each do |img|
+    - vintage_posters = Dir.glob("source/images/posters/*.jpg")
+    - vintage_posters[23..28].each do |img|
       .grid__item
         = link_to "../images/posters/#{img.split('/').last}", data: { lightbox: 'vintage-posters', title: img.split('/').last().gsub('-', ' ').sub('.jpg','').capitalize.gsub(/jawa|Jawa/, 'JAWA')}
           = image_tag "posters/#{img.split('/').last}", class: 'image-grid__image', alt: img.split('/').last().gsub('-', ' ').sub('.jpg','').capitalize.gsub(/jawa|Jawa/, 'JAWA')
