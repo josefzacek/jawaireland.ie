@@ -4,3 +4,6 @@ Disallow: /vintage-posters/page-1
 Disallow: /vintage-posters/page-2
 Disallow: /vintage-posters/page-3
 Disallow: /vintage-posters/page-4
+Disallow: /vintage-posters/page-5
+Disallow: /vintage-posters/page-6
+Disallow: /vintage-posters/page-7
