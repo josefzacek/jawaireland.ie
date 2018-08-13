@@ -46,7 +46,10 @@ html lang="en"
     = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js'
     = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/jquery-infinitescroll/3.0.3/infinite-scroll.pkgd.min.js"
     = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.1/masonry.pkgd.min.js"
+    = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/zoom.js/0.0.1/zoom.min.js"
     - if build?
+      == javascript_include_tag  "https://www.jawaireland.ie/javascripts/transition.js"
       == javascript_include_tag  "https://www.jawaireland.ie/javascripts/all.js"
     - else
+      == javascript_include_tag  "transition"
       == javascript_include_tag  "all"
