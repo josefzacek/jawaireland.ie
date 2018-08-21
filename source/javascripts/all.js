@@ -104,3 +104,8 @@ function labnolIframe() {
   iframe.setAttribute("allowfullscreen", "1");
   this.parentNode.replaceChild(iframe, this);
 }
+
+// lazy load on models page
+var myLazyLoad = new LazyLoad({
+  elements_selector: '.lazy-loaded-image'
+})
