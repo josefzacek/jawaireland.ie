@@ -107,5 +107,6 @@ function labnolIframe() {
 
 // lazy load on models page
 var myLazyLoad = new LazyLoad({
-  elements_selector: '.lazy-loaded-image'
+  elements_selector: '.lazy-loaded-image',
+  threshold: 200
 })
