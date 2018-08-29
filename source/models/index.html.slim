@@ -33,19 +33,25 @@ title: JAWA motorbikes models
     - @models.each do |model|
       .col-md-4.col-sm-6.mb-4
         .card.h-100.border-primary
-            = image_tag "", alt: "#{model[:title]}", data: { action: 'zoom', src: "/images/models/#{model[:image_url]}"}, class: "card-img-top border border-left-0 border-right-0 border-top-0 lazy-loaded-image"
-            .card-body.d-flex.flex-column.justify-content-end
-              p.mb-0
-                small
-                  b>
-                    | Model:
-                  = model[:title]
-              p.mb-0
-                small
-                  b>
-                    | Manufacture year:
-                  = model[:manufacture_year]
-              p.mb-0.text-secondary
-                small
-                  | Details page coming soon
-                  //= link_to "Read more ...", "/models/#{model[:title].gsub(' ','-').downcase}", title: "#{model[:title]}"
+          - if model[:pop_up_image_url].present?
+            = link_to "/images/models/#{model[:pop_up_image_url]}", data: {toggle: "lightbox", title: "#{model[:title]}"} do
+              = image_tag "", alt: "#{model[:title]}", data: {src: "/images/models/#{model[:image_url]}"}, class: "card-img-top border border-left-0 border-right-0 border-top-0 lazy-loaded-image"
+          - else
+            = link_to "/images/models/#{model[:image_url]}", data: {toggle: "lightbox", title: "#{model[:title]}"} do
+              = image_tag "", alt: "#{model[:title]}", data: {src: "/images/models/#{model[:image_url]}"}, class: "card-img-top border border-left-0 border-right-0 border-top-0 lazy-loaded-image"
+
+          .card-body.d-flex.flex-column.justify-content-end
+            p.mb-0
+              small
+                b>
+                  | Model:
+                = model[:title]
+            p.mb-0
+              small
+                b>
+                  | Manufacture year:
+                = model[:manufacture_year]
+            p.mb-0.text-secondary
+              small
+                | Details page coming soon
+                //= link_to "Read more ...", "/models/#{model[:title].gsub(' ','-').downcase}", title: "#{model[:title]}"

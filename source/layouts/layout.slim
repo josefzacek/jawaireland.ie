@@ -16,6 +16,7 @@ html lang="en"
     = favicon_tag 'https://www.jawaireland.ie/images/favicon.ico'
     = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css'
     = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css'
+    = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css'
     - if build?
       == stylesheet_link_tag  "https://www.jawaireland.ie/stylesheets/site.css"
     - else
@@ -46,11 +47,9 @@ html lang="en"
     = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js'
     = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/jquery-infinitescroll/3.0.3/infinite-scroll.pkgd.min.js"
     = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.1/masonry.pkgd.min.js"
-    = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/zoom.js/0.0.1/zoom.min.js"
     = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.15.0/lazyload.min.js"
+    = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"
     - if build?
-      == javascript_include_tag  "https://www.jawaireland.ie/javascripts/transition.js"
       == javascript_include_tag  "https://www.jawaireland.ie/javascripts/all.js"
     - else
-      == javascript_include_tag  "transition"
       == javascript_include_tag  "all"

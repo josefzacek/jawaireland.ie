@@ -72,6 +72,11 @@ $( document ).ready(function() {
     hideNav: '.pagination',
   });
 
+  // pop up on models page
+  $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+    event.preventDefault()
+    $(this).ekkoLightbox()
+  })
 });
 
 /* Light YouTube Embeds by @labnol on videos page */
