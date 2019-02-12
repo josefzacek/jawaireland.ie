@@ -13,17 +13,17 @@ html lang="en"
     - if current_page.data.robots
       meta name="robots" content=current_page.data.robots
 
-    = favicon_tag 'https://www.jawaireland.ie/images/favicon.ico'
+    = favicon_tag 'https://jawaireland.ie/images/favicon.ico'
     = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css'
     = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css'
     = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css'
     - if build?
-      == stylesheet_link_tag  "https://www.jawaireland.ie/stylesheets/site.css"
+      == stylesheet_link_tag  "https://jawaireland.ie/stylesheets/site.css"
     - else
       == stylesheet_link_tag :site
 
     - if build?
-      == javascript_include_tag "https://www.googletagmanager.com/gtag/js?id=UA-107716154-1", async: true
+      == javascript_include_tag "https://googletagmanager.com/gtag/js?id=UA-107716154-1", async: true
       javascript:
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -50,7 +50,7 @@ html lang="en"
     = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.15.0/lazyload.min.js"
     = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"
     - if build?
-      == javascript_include_tag  "https://www.jawaireland.ie/javascripts/all.js"
+      == javascript_include_tag  "https://jawaireland.ie/javascripts/all.js"
     - else
       == javascript_include_tag  "all"
 
