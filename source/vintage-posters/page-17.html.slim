@@ -1,0 +1,28 @@
+---
+title: JAWA motorbikes vintage posters
+---
+
+.container
+
+  p &nbsp;
+  .row
+    .col-lg-12
+      h1
+        b
+          span.text-primary> JAWA
+        | Motorbikes Vintage Posters
+
+      p &nbsp;
+
+  .masonry-grid.are-images-unloaded
+    .grid__col-sizer
+    .grid__gutter-sizer
+    - vintage_posters = Dir.glob("source/images/posters/*.jpg")
+    - vintage_posters[107..120].each do |img|
+      .grid__item
+        = link_to "../images/posters/#{img.split('/').last}", data: { lightbox: 'vintage-posters', title: img.split('/').last().gsub('-', ' ').sub('.jpg','').capitalize.gsub(/jawa|Jawa/, 'JAWA')}
+          = image_tag "posters/#{img.split('/').last}", class: 'image-grid__image', alt: img.split('/').last().gsub('-', ' ').sub('.jpg','').capitalize.gsub(/jawa|Jawa/, 'JAWA')
+
+  = partial "vintage-posters/_page_load_status"
+
+.clearfix
