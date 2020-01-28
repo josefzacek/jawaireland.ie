@@ -41,20 +41,30 @@ title: Contact Jawa Ireland
           .form-group
             b
               = label_tag :name, class: 'label'
-            = text_field_tag :name, name: "name", id: "name", placeholder: "Name *", required: true, class: 'form-control'
+            = text_field_tag :name, name: "name", id: "name", placeholder: "Name", required: true, class: 'form-control'
           .form-group
             b
               = label_tag :email, class: 'label'
-            = email_field_tag :email, name: "email", id: "email", placeholder: "Email address *", required: true, class: 'form-control'
+            = email_field_tag :email, name: "email", id: "email", placeholder: "Email address", required: true, class: 'form-control'
           .form-group
             b
               = label_tag :phone, class: 'label'
-            = text_field_tag :phone, name: "phone", id: "email", placeholder: "Phone number", class: 'form-control'
+            = text_field_tag :phone, name: "phone", id: "phone", placeholder: "Phone number", required: true, class: 'form-control'
           .form-group
             b
               = label_tag :message, class: 'label'
-            = text_area_tag :message, name: "message", id: "message", placeholder: "Message *", rows: 6, required: true, class: 'form-control'
-          button.btn.btn-outline-primary.float-right type="submit"
+            = text_area_tag :message, name: "message", id: "message", placeholder: "Message", rows: 6, required: true, class: 'form-control'
+          .form-row
+            .col-9.text-right
+              b
+                = label_tag 'What is 3 + 3', class: 'label mt-2'
+            .col
+              = text_field_tag 'What is 3 + 3', name: "question", id: "question", required: true, class: 'form-control'
+
+          p.text-lg-right
+            small Please note all fields must be filled in before submitting the form
+
+          button.btn.btn-outline-primary.float-right.mt-3 disabled="disabled" type="submit"
             | Send
             = ' '
             i.fa.fa-paper-plane
