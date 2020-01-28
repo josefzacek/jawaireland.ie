@@ -77,6 +77,15 @@ $( document ).ready(function() {
     event.preventDefault()
     $(this).ekkoLightbox()
   })
+
+  // check if contact form security question is set to 6, if so remove disabled attribute from button
+  $('body.contact input[name="question"]').on('input', function() {
+    if ( $(this).val().length > 0 &&  $(this).val() === "6"  ){
+      $('button.btn').prop("disabled", false);
+    } else {
+      $('button.btn').prop("disabled", true);
+    }
+  });
 });
 
 /* Light YouTube Embeds by @labnol on videos page */
