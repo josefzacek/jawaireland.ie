@@ -78,9 +78,17 @@ $( document ).ready(function() {
     $(this).ekkoLightbox()
   })
 
-  // check if contact form security question is set to 6, if so remove disabled attribute from button
+  // check if contact form security question is set to random number generated, if so remove disabled attribute from button
+  // generate random number from 13 - 33
+  var randomNumber = Math.floor(Math.random() * 33) + 13
+
+  // replace security question label text
+  $(".security-label").text("What is 3 + " + randomNumber + ":")
+
+  // check if generated number matches user input
   $('body.contact input[name="question"]').on('input', function() {
-    if ( $(this).val().length > 0 &&  $(this).val() === "6"  ){
+
+    if ( $(this).val().length > 0 &&  $(this).val() == randomNumber + 3  ){
       $('button.btn').prop("disabled", false);
     } else {
       $('button.btn').prop("disabled", true);
