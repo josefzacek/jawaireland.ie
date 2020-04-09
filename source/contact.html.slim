@@ -37,7 +37,7 @@ title: Contact Jawa Ireland
     .col-lg-8
       = form_tag 'https://formcarry.com/s/DFeYKxhms5s_', :method => 'post' do
         - field_set_tag do
-          = hidden_field_tag 'redirect_to', value: 'https://www.jawaireland.ie/thank-you'
+          = hidden_field_tag name: "_gotcha"
           .form-group
             b
               = label_tag :name, class: 'label'
