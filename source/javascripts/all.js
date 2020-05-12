@@ -9,13 +9,13 @@ $( document ).ready(function() {
 
   // leaflet map on contact page
   if ($('#leaflet-map').length) {
-    var map = L.map('leaflet-map').setView([53.349729, -6.260631], 11);
+    var map = L.map('leaflet-map').setView([53.6531122,-6.6861977], 9);
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    L.marker([53.349729, -6.260631]).addTo(map).bindPopup('JAWA Ireland');
+    L.marker([53.6531122,-6.6861977]).addTo(map).bindPopup('JAWA Ireland');
 
     map.dragging.disable();
     map.scrollWheelZoom.disable();
