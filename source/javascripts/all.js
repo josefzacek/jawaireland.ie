@@ -79,7 +79,7 @@ $( document ).ready(function() {
   })
 
   // check if contact form security question is set to random number generated, if so remove disabled attribute from button
-  // generate random number from 13 - 33
+  // generate random number from 13 - 46
   var randomNumber = Math.floor(Math.random() * 33) + 13
 
   // replace security question label text
