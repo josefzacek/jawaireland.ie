@@ -86,7 +86,7 @@ $( document ).ready(function() {
   $(".security-question-label").text("What is 3 + " + randomNumber + ":")
 
   // check if generated number matches user input
-  $('body.contact input[name="question"]').on('input', function() {
+  $('body.contact input#security-question').on('input', function() {
 
     if ( $(this).val().length > 0 &&  $(this).val() == randomNumber + 3  ){
       $('button.btn').prop("disabled", false);
