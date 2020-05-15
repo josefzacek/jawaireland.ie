@@ -83,7 +83,7 @@ $( document ).ready(function() {
   var randomNumber = Math.floor(Math.random() * 33) + 13
 
   // replace security question label text
-  $(".security-label").text("What is 3 + " + randomNumber + ":")
+  $(".security-question-label").text("What is 3 + " + randomNumber + ":")
 
   // check if generated number matches user input
   $('body.contact input[name="question"]').on('input', function() {
