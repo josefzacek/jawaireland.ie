@@ -79,14 +79,14 @@ $( document ).ready(function() {
   })
 
   // check if contact form security question is set to random number generated, if so remove disabled attribute from button
-  // generate random number from 13 - 33
+  // generate random number from 13 - 46
   var randomNumber = Math.floor(Math.random() * 33) + 13
 
   // replace security question label text
-  $(".security-label").text("What is 3 + " + randomNumber + ":")
+  $(".security-question-label").text("What is 3 + " + randomNumber + ":")
 
   // check if generated number matches user input
-  $('body.contact input[name="question"]').on('input', function() {
+  $('body.contact input#security-question').on('input', function() {
 
     if ( $(this).val().length > 0 &&  $(this).val() == randomNumber + 3  ){
       $('button.btn').prop("disabled", false);
@@ -94,6 +94,26 @@ $( document ).ready(function() {
       $('button.btn').prop("disabled", true);
     }
   });
+});
+
+// submit contact form via Ajax
+$("form.contact-form").submit(function(e){
+    e.preventDefault();
+    var href = $(this).attr("action");
+    $.ajax({
+        type: "POST",
+        dataType: "json",
+        url: href,
+        data: $(this).serialize(),
+        success: function(response){
+            if(response.status == "success"){
+                $("form.contact-form").addClass("d-none");
+                $(".form-submitted").removeClass("d-none");
+            }else{
+                $(".form-error").removeClass("d-none");
+            }
+        }
+    });
 });
 
 /* Light YouTube Embeds by @labnol on videos page */

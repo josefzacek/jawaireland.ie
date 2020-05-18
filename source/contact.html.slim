@@ -35,39 +35,55 @@ title: Contact Jawa Ireland
       br
 
     .col-lg-8
-      = form_tag 'https://getsimpleform.com/messages?form_api_token=8a1414a224e622757559d5f523ebf0e8', :method => 'post' do
+      = form_tag 'https://formcarry.com/s/DFeYKxhms5s_', :method => 'post', class: 'contact-form' do
         - field_set_tag do
-          = hidden_field_tag 'redirect_to', value: 'https://www.jawaireland.ie/thank-you'
+          = hidden_field_tag name: "_gotcha"
           .form-group
             b
               = label_tag :name, class: 'label'
-            = text_field_tag :name, name: "name", id: "name", placeholder: "Name", required: true, class: 'form-control'
+            = text_field_tag :name, name: "Name", id: "name", placeholder: "Name", required: true, class: 'form-control'
           .form-group
             b
               = label_tag :email, class: 'label'
-            = email_field_tag :email, name: "email", id: "email", placeholder: "Email address", required: true, class: 'form-control'
+            = email_field_tag :email, name: "Email", id: "email", placeholder: "Email address", required: true, class: 'form-control'
           .form-group
             b
               = label_tag :phone, class: 'label'
-            = text_field_tag :phone, name: "phone", id: "phone", placeholder: "Phone number", required: true, class: 'form-control'
+            = text_field_tag :phone, name: "Phone", id: "phone", placeholder: "Phone number", required: true, class: 'form-control'
           .form-group
             b
               = label_tag :message, class: 'label'
-            = text_area_tag :message, name: "message", id: "message", placeholder: "Message", rows: 6, required: true, class: 'form-control'
+            = text_area_tag :message, name: "Message", id: "message", placeholder: "Message", rows: 6, required: true, class: 'form-control'
           .form-row
             .col-9.text-right
               b
-                = label_tag 'What is 3 + 3', class: 'label mt-2 security-label'
+                = label_tag 'security-question', class: 'label mt-2 security-question-label'
             .col
-              = text_field_tag 'What is 3 + 3', name: "question", id: "question", required: true, class: 'form-control'
+              = text_field_tag 'What is 3 + 3', name: "Question", id: "security-question", required: true, class: 'form-control'
 
-          p.text-lg-right
+          p.text-md-right
             small Please note all fields must be filled in before submitting the form
 
-          button.btn.btn-outline-primary.float-right.mt-3 disabled="disabled" type="submit"
-            | Send
-            = ' '
-            i.fa.fa-paper-plane
+          .row
+            .col
+              button.btn.btn-outline-primary.float-right.mt-3 disabled="disabled" type="submit"
+                | Send
+                = ' '
+                i.fa.fa-paper-plane
+
+      .form-submitted.text-center.d-none
+        = partial "layouts/jawa_logo"
+
+        h1.text-primary
+          | Thank you
+        p
+        	| Contact form has been successfully submitted!
+
+      .form-error.text-center.d-none
+        h1.text-primary
+          | Oops!
+        p
+        	| Contact form submission failed, please try again later.
 
       p &nbsp;
       p &nbsp;
