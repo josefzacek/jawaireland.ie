@@ -54,12 +54,6 @@ title: Contact Jawa Ireland
             b
               = label_tag :message, class: 'label'
             = text_area_tag :message, name: "Message", id: "message", placeholder: "Message", rows: 6, required: true, class: 'form-control'
-          .form-row
-            .col-9.text-right
-              b
-                = label_tag 'security-question', class: 'label mt-2 security-question-label'
-            .col
-              = text_field_tag 'What is 3 + 3', name: "Question", id: "security-question", required: true, class: 'form-control'
 
           p.text-md-right
             small Please note all fields must be filled in before submitting the form
