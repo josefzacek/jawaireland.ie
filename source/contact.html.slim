@@ -35,7 +35,7 @@ title: Contact Jawa Ireland
       br
 
     .col-lg-8
-      = form_tag 'https://formcarry.com/s/DFeYKxhms5s_', :method => 'post', class: 'contact-form' do
+      = form_tag 'https://formcarry.com/s/DFeYKxhms5s_', :method => 'post', class: 'contact-form', id: 'contact-form' do
         - field_set_tag do
           = hidden_field_tag name: "_gotcha"
           .form-group
