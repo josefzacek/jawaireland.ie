@@ -78,22 +78,6 @@ $( document ).ready(function() {
     $(this).ekkoLightbox()
   })
 
-  // check if contact form security question is set to random number generated, if so remove disabled attribute from button
-  // generate random number from 13 - 46
-  var randomNumber = Math.floor(Math.random() * 33) + 13
-
-  // replace security question label text
-  $(".security-question-label").text("What is 3 + " + randomNumber + ":")
-
-  // check if generated number matches user input
-  $('body.contact input#security-question').on('input', function() {
-
-    if ( $(this).val().length > 0 &&  $(this).val() == randomNumber + 3  ){
-      $('button.btn').prop("disabled", false);
-    } else {
-      $('button.btn').prop("disabled", true);
-    }
-  });
 });
 
 // submit contact form via Ajax
@@ -115,6 +99,27 @@ $("form.contact-form").submit(function(e){
         }
     });
 });
+
+// Google recaptcha on contact page
+$('#contact-form').submit(function(event) {
+  console.log('form submitted.');
+
+  if (!grecaptcha.getResponse()) {
+    console.log('captcha not yet completed.');
+
+    event.preventDefault(); //prevent form submit
+    grecaptcha.execute();
+  } else {
+    console.log('form really submitted.');
+  }
+
+});
+
+onCompleted = function() {
+  console.log('captcha completed.');
+  $('#contact-form').submit();
+}
+
 
 /* Light YouTube Embeds by @labnol on videos page */
 /* Web: http://labnol.org/?p=27941 */

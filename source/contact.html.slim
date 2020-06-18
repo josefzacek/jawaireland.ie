@@ -35,7 +35,7 @@ title: Contact Jawa Ireland
       br
 
     .col-lg-8
-      = form_tag 'https://formcarry.com/s/DFeYKxhms5s_', :method => 'post', class: 'contact-form' do
+      = form_tag 'https://formcarry.com/s/DFeYKxhms5s_', :method => 'post', class: 'contact-form', id: 'contact-form' do
         - field_set_tag do
           = hidden_field_tag name: "_gotcha"
           .form-group
@@ -54,19 +54,15 @@ title: Contact Jawa Ireland
             b
               = label_tag :message, class: 'label'
             = text_area_tag :message, name: "Message", id: "message", placeholder: "Message", rows: 6, required: true, class: 'form-control'
-          .form-row
-            .col-9.text-right
-              b
-                = label_tag 'security-question', class: 'label mt-2 security-question-label'
-            .col
-              = text_field_tag 'What is 3 + 3', name: "Question", id: "security-question", required: true, class: 'form-control'
+
+          #recaptcha.g-recaptcha data-sitekey="6LcNHaMZAAAAADnV7lvtwt7exrAe5nTcceI1LmdY" data-callback="onCompleted" data-size="invisible"
 
           p.text-md-right
             small Please note all fields must be filled in before submitting the form
 
           .row
             .col
-              button.btn.btn-outline-primary.float-right.mt-3 disabled="disabled" type="submit"
+              button.btn.btn-outline-primary.float-right.mt-3 type="submit"
                 | Send
                 = ' '
                 i.fa.fa-paper-plane
