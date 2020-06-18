@@ -100,6 +100,27 @@ $("form.contact-form").submit(function(e){
     });
 });
 
+// Google recaptcha on contact page
+$('#contact-form').submit(function(event) {
+  console.log('form submitted.');
+
+  if (!grecaptcha.getResponse()) {
+    console.log('captcha not yet completed.');
+
+    event.preventDefault(); //prevent form submit
+    grecaptcha.execute();
+  } else {
+    console.log('form really submitted.');
+  }
+
+});
+
+onCompleted = function() {
+  console.log('captcha completed.');
+  $('#contact-form').submit();
+}
+
+
 /* Light YouTube Embeds by @labnol on videos page */
 /* Web: http://labnol.org/?p=27941 */
 document.addEventListener("DOMContentLoaded",
