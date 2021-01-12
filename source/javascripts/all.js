@@ -15,7 +15,8 @@ $( document ).ready(function() {
       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    L.marker([53.6531122,-6.6861977]).addTo(map).bindPopup('JAWA Ireland');
+    // remove marker
+    // L.marker([53.6531122,-6.6861977]).addTo(map).bindPopup('JAWA Ireland');
 
     map.dragging.disable();
     map.scrollWheelZoom.disable();
