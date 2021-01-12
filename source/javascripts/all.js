@@ -9,7 +9,7 @@ $( document ).ready(function() {
 
   // leaflet map on contact page
   if ($('#leaflet-map').length) {
-    var map = L.map('leaflet-map').setView([53.6531122,-6.6861977], 9);
+    var map = L.map('leaflet-map').setView([53.6531122,-6.6861977], 6);
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
