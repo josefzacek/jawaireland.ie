@@ -12,6 +12,7 @@ gem 'tzinfo-data', '~> 1.2018', '>= 1.2018.4', platforms: [:mswin, :mingw]
 
 # Middleman Gems
 gem 'middleman', '~> 4.4'
+gem 'middleman-core', '~> 4.4'
 gem 'bootstrap', '~> 4.0.0.beta'
 gem 'middleman-compass', '~> 4.0', '>= 4.0.1'
 gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
