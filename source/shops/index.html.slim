@@ -38,7 +38,7 @@ description: See various motorbikes shops ordered in alphabetical order selling 
   - @sortedShops.each do |shop|
     .row.my-5.py-3
       .col-md-4.mb-5.mb-md-0.pr-lg-5
-        = image_tag shop[:image], class: 'img-fluid mx-auto d-block'
+        = image_tag "shops-logos/#{shop[:image]}", alt: "#{shop[:image].gsub("-", ".").gsub(".png", "")} logo", class: "img-fluid mx-auto d-block border"
 
       .col-md-8.col-lg-7.mt-lg-5.border.pt-3.border-primary.border-top-0.border-right-0.border-bottom-0.pl-lg-5
         h4.text-primary
