@@ -1,0 +1,60 @@
+---
+title: JAWA shops
+keywords: jawa, jawa motorbikes, jawa motorbikes ireland, jawa ireland
+description: See various motorbikes shops ordered in alphabetical order selling JAWA spare parts, new JAWA motorbikes, JAWA accessories, JAWA manuals and other materials.
+---
+
+= partial "shops/shops_list"
+
+.container
+
+  p &nbsp;
+  .row
+    .col-lg-8.mb-1
+      h1
+        b
+          span.text-primary<> JAWA
+        | Shops
+
+      p.lead
+        | Various motorbikes shops ordered in alphabetical order selling
+        b
+          span.text-primary<>
+            | JAWA
+        |spare parts, new
+        b
+          span.text-primary<>
+            | JAWA
+        | motorbikes,
+        b
+          span.text-primary<>
+            | JAWA
+        |accessories,
+        b
+          span.text-primary<>
+            | JAWA
+        | manuals and other materials.
+
+  - @sortedShops.each do |shop|
+    .row.my-5.py-3
+      .col-md-4.mb-5.mb-md-0.pr-lg-5
+        = image_tag "shops-logos/#{shop[:image]}", alt: "#{shop[:image].gsub("-", ".").gsub(".png", "")} logo", class: "img-fluid mx-auto d-block border"
+
+      .col-md-8.col-lg-7.mt-lg-5.border.pt-3.border-primary.border-top-0.border-right-0.border-bottom-0.pl-lg-5
+        h4.text-primary
+          = shop[:name]
+
+        p
+          = shop[:description]
+
+        p
+          b
+            | Address:
+          br
+          = shop[:address]
+
+        p
+          b
+            | Website:
+          br
+           u =link_to shop[:website], shop[:website], target: "_blank", title: shop[:website] , class: "text-primary"

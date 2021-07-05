@@ -1,0 +1,11 @@
+- shops = [{"image": "jawaparts-com.png",
+            "name": "JAWAPARTS",
+            "description": "In our store we have more than 4000 spare parts in offer for motorcycles - JAWA, ČZ, JAWA-ČZ, SIMSON, BABETTA, STADION. Since 2017 we are official dealer of JAWA MOTO S.R.O. (Czech republic).",
+            "website": "https://www.jawaparts.com",
+            "address": "JAWAPARTS.COM | MOTOJELÍNEK.CZ <br> Santražiny 5342 <br> 760 01 <br> Zlín <br> Czech Republic",
+          },
+]
+
+
+
+- @sortedShops = shops.sort_by { |h| h[:name].downcase }
