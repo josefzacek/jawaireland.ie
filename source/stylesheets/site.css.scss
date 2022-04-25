@@ -30,6 +30,20 @@ button {
   }
 }
 
+// home page cards
+@media (min-width: 768px) {
+    .position-relative {
+        position: relative;
+
+        .text-column {
+            position: absolute;
+            left: 50%;
+            top: 30%;
+        }
+    }
+}
+
+
 // history-timeline page
 .history-timeline {
 
