@@ -26,6 +26,36 @@ description: Welcome to Jawa Ireland, a site dedicated to JAWA motorbikes contai
         source src="images/jawa-rider.mp4" type="video/mp4"
         source src="images/jawa-rider.webm" type="video/webm"
 
+
+.container
+  br
+  br
+  br
+  .row.position-relative
+    .col-md-8
+      = image_tag "home-page/JAWA-250-Duplex.png", class:"img-fluid mx-auto d-block border"
+    .col-md-6.p-3.p-md-4.p-lg-5.rounded.text-column
+      h2
+        span.text-primary<>
+          b JAWA
+        | models
+
+      p
+        | See some past and currect
+        b.text-primary<> JAWA
+        | models ever made. Some models were exported to over 120 countries wordwide.
+
+      p
+        | The best known model was the 350 Pérák and in the 1970s the 350 Californian. The 350 Californian appeared in red and black colors making it a bit different from other
+        b.text-primary<> JAWA
+        | models.
+
+      u.float-right
+        = link_to "/models", class:"text-primary"
+          | See
+          b<> JAWA
+          | models
+
 .container-fluid
   .row
     .col-lg-12
@@ -46,24 +76,3 @@ description: Welcome to Jawa Ireland, a site dedicated to JAWA motorbikes contai
           = link_to '+353 870525927', 'tel:+353870525927'
 
       p &nbsp;
-
-.container
-  .row.position-relative
-    .col-md-8
-      = image_tag "home-page/JAWA-350-motorcycles-emerged-from-behind-the-iron-curtain.jpg", class:"img-fluid mx-auto d-block border"
-    .col-md-6.bg-white.p-3.p-md-4.p-lg-5.rounded.text-column
-      h2
-        span.text-primary<>
-          b JAWA
-        | models
-
-      p
-        | See some past and currect JAWA models ever made. Some models were exported to over 120 countries wordwide.
-
-      p
-        | The best known model was the 350 Pérák and in the 1970s the 350 Californian. It appeared in typical black and red coloring.
-
-      u
-        = link_to "See JAWA models ", "/models", class:"text-primary"
-
-      <i class="fa-solid fa-right-long"></i>
