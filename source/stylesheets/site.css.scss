@@ -35,11 +35,19 @@ button {
     .position-relative {
         position: relative;
 
-        .text-column {
+        .text-column-right {
           position: absolute;
           left: 50%;
           top: 30%;
           background-color: #ffffffcc;
+        }
+
+        .text-column-left {
+          position: absolute;
+          left: 0%;
+          top: 30%;
+          background-color: #ffffffcc;
+          z-index: 1;
         }
     }
 }
