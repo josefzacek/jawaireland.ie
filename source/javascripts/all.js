@@ -7,6 +7,24 @@ $( document ).ready(function() {
     $('.home-page-video').css('visibility', 'hidden');
   }
 
+  // arrow down on home page
+  var deviceWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+  var navbarHeight = $('nav.navbar').height();
+
+  if (deviceWidth > 1400 ){
+      if ($('.scroll-down-holder').length) {
+          $(window).scroll(function() {
+              if ($(window).scrollTop() >= navbarHeight) {
+                  $('.scroll-down-holder').fadeOut(500);
+              } else {
+                  $('.scroll-down-holder').fadeIn(500);
+              }
+          })
+      }
+  } else {
+      $('.scroll-down-holder').hide();
+  }
+
   // leaflet map on contact page
   if ($('#leaflet-map').length) {
     var map = L.map('leaflet-map').setView([53.6531122,-6.6861977], 6);

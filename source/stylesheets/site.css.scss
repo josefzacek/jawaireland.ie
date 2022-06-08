@@ -28,6 +28,48 @@ button {
       }
     }
   }
+
+  // arrow down on home page
+  .scroll-down-holder {
+    text-align: center;
+    position: fixed;
+    bottom: 30px;
+    left: calc(50% - 23px);
+    opacity: 1;
+
+    span {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 16px;
+      letter-spacing: -0.02em;
+      margin-bottom: 11px;
+      display: block;
+      color: #000000;
+    }
+
+    svg {
+      display: block;
+      margin: 0 auto;
+    }
+
+    svg.arrow {
+      animation: MoveUpDown 3s linear infinite;
+      position: absolute;
+      left: 14px;
+      bottom: -10px;
+    }
+  }
+
+  @keyframes MoveUpDown {
+    0%, 100% {
+      bottom: -10px;
+    }
+
+    50% {
+      bottom: 10px;
+    }
+  }
 }
 
 // home page cards
