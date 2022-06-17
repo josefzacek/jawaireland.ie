@@ -119,6 +119,36 @@ description: Welcome to Jawa Ireland, a site dedicated to JAWA motorbikes contai
           b<> JAWA
           | posters
 
+.container-fluid.mt-5
+  br
+  br
+  br
+  .row.bg-primary
+    .col.pt-5
+      .row.mt-3
+        .col-3
+        .col-6
+          = image_tag "home-page/JAWA-logo-white.svg", alt: "JAWA logo white", loading:"lazy", class:"img-fluid mx-auto d-block"
+        .col-3
+
+    .col-12.pb-5
+      h1.text-center.text-white.mt-5
+        b<> JAWA
+        | Ireland
+
+      p.text-center.text-white.mt-4.lead
+        | Looking for spare parts, advise or just chat about
+        b.h5<> JAWA
+        | motobikes?
+
+      p.text-center.text-white.mt-4.lead
+        | Great, I'll be delighted to hear from you
+
+      p.text-center.text-white.mt-4.lead
+        u
+          = link_to "/contact", class:"btn btn-lg btn-outline-light text-white get-in-touch-button"
+            | Get in touch
+
   br
   br
   br

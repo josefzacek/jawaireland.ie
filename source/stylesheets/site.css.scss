@@ -94,6 +94,10 @@ button {
     }
 }
 
+// home page get in touch button
+a.get-in-touch-button:hover, a.get-in-touch-button:active {
+  color: $jawa-red !important;
+}
 
 // history-timeline page
 .history-timeline {
