@@ -8,6 +8,11 @@ button {
   cursor: pointer;
 }
 
+
+.navbar-light .navbar-nav .nav-link.text-primary {
+  text-decoration: underline
+}
+
 // home page video
 .video-wrapper {
   position: relative;
