@@ -97,3 +97,38 @@ description: JAWA Ireland keyrings with shopping trolley token.
           <path d="M0 17.65L7.63333 10L0 2.35L2.35 0L12.35 10L2.35 20L0 17.65Z" fill="black" />
         </svg>
 
+
+.container.mb-5.pb-5
+  .row.mt-5.pt-5.how-to-buy-row
+    .col
+      h1.text-center
+        | How to buy
+
+      br
+      br
+
+      p.text-center.lead.mb-5
+        | There are multiple ways to buy, select the one below which suits you the best.
+
+  .row.d-flex.justify-content-center.mx-0.how-to-buy-columns-row
+    .col.col-lg-2.d-lg-block.d-none
+
+    .col.col-12.col-md-5.col-lg-3.card.p-3.d-flex.justify-content-between.text-center
+      h3.mb-4.mt-3
+        | Email me
+
+      p.mb-5
+        | Click on the button below and email me your request.
+
+      = mail_to 'info@jawaireland.ie', 'Email me', target: '_blank', class: 'btn btn-primary'
+
+    .col.col-12.col-md-5.col-lg-3.card.p-3.d-flex.justify-content-between.text-center
+      h3.mb-4.mt-3
+        | Use contact form
+
+      p.mb-5
+        | Click on the button below if you prefer an online contact form?
+
+      = link_to 'Contact page', '/contact/', class: 'btn btn-primary'
+
+    .col.col-lg-2.d-lg-block.d-none
