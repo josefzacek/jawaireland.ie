@@ -163,3 +163,32 @@ var myLazyLoad = new LazyLoad({
   elements_selector: '.lazy-loaded-image',
   threshold: 200
 })
+
+// keyrings pagee slider
+$('.keyrings .slider').slick({
+  centerPadding: '30px',
+  slidesToShow: 3,
+  centerMode: true,
+  slidesToScroll: 1,
+  autoplay: true,
+  dots: true,
+  prevArrow: $('.prev'),
+  nextArrow: $('.next'),
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        centerPadding: '20px',
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        centerPadding: '20px',
+        slidesToShow: 1,
+        dots: false
+      }
+    }
+  ]
+});
