@@ -419,6 +419,11 @@ a.get-in-touch-button:hover, a.get-in-touch-button:active {
       z-index: -2;
     }
   }
+
+  .how-to-buy-columns-row {
+    gap:50px;
+  }
+}
 }
     display: block;
     background: linear-gradient(90deg, #e9ecef00 0%, #e9ecef 83.9%);
