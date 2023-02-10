@@ -168,7 +168,6 @@ var myLazyLoad = new LazyLoad({
 $('.keyrings .slider').slick({
   centerPadding: '30px',
   slidesToShow: 3,
-  centerMode: true,
   slidesToScroll: 1,
   autoplay: true,
   dots: true,
