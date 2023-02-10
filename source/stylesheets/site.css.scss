@@ -424,12 +424,107 @@ a.get-in-touch-button:hover, a.get-in-touch-button:active {
     gap:50px;
   }
 }
-}
-    display: block;
-    background: linear-gradient(90deg, #e9ecef00 0%, #e9ecef 83.9%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -2;
+
+  .slider-container {
+    position: relative;
+    max-width: 1600px;
+
+    @include media-breakpoint-up(lg) {
+      &:before {
+        content: "";
+        display: block;
+        width: 300px;
+        height: 100%;
+        position: absolute;
+        background: linear-gradient(90deg, #ffffff 7.8%, rgba(255, 255, 255, 0) 83.9%);
+          z-index: 9;
+      }
+      &:after {
+        content: "";
+        display: block;
+        width: 300px;
+        height: 100%;
+        position: absolute;
+        z-index: 9;
+        top: 0;
+        right: 0;
+        background: linear-gradient(90deg, #FFFFFF 7.8%, rgba(255, 255, 255, 0) 83.9%);
+        transform: rotate(-180deg);
+      }
+    }
+
+    .slider {
+      .slick-slide {
+        .slider__item {
+          box-sizing: border-box;
+          padding: 0 22px 15px 22px;
+          position: relative;
+        }
+      }
+      ul.slick-dots {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 1rem 0;
+        list-style-type: none;
+
+        li {
+          margin: 10px;
+
+          button {
+            display: block;
+            width: 10px;
+            height: 10px;
+            padding: 0;
+            border: none;
+            border-radius: 100%;
+            background-color: $gray-200;
+            text-indent: -9999px;
+          }
+
+          &.slick-active {
+            button {
+              background: $jawa-red;
+            }
+          }
+
+        }
+      }
+    }
+
+    .slider-arrows {
+      position: absolute;
+      margin: 0px auto;
+      left: 50%;
+      transform: translate(-50%, 0);
+      z-index: 999;
+      height: 0px;
+      top: 50%;
+      width: 90%;
+      @media(min-width: 1800px){
+        width: calc(100% + 130px);
+      }
+      ul {
+        list-style: none;
+        height: 0;
+        li {
+          position: absolute;
+          cursor: pointer;
+          @include media-breakpoint-down(md) {
+            & {
+              width: 50px;
+              height: 50px;
+              background-color: $white;
+            }
+          }
+
+          &.prev {
+            left: 0;
+          }
+          &.next {
+            right: 0;
+          }
+        }
+      }
+    }
   }
-}
