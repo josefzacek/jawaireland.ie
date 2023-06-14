@@ -8,6 +8,10 @@ button {
   cursor: pointer;
 }
 
+body:not(.contact) .grecaptcha-badge {
+  visibility: hidden;
+}
+
 
 .navbar-light .navbar-nav .nav-link.text-primary {
   text-decoration: underline
