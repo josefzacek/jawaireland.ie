@@ -120,12 +120,15 @@ $("form.contact-form").submit(function(e){
 });
 
 // recaptcha V3
-grecaptcha.ready(function() {
-	grecaptcha.execute("6LdBpVojAAAAAIYx9eH1Pye_lHdk03vZ5dYUAgYJ", {action: "homepage"})
-	.then(function(token) {
-    document.getElementById('captchaResponse').value = token;
-	});
-});
+if (window.location.pathname === "/contact/" || window.location.pathname === "/contact") {
+  grecaptcha.ready(function() {
+  	grecaptcha.execute("6LdBpVojAAAAAIYx9eH1Pye_lHdk03vZ5dYUAgYJ", {action: "homepage"})
+  	.then(function(token) {
+      document.getElementById('captchaResponse').value = token;
+      console.log(token)
+  	});
+  });
+}
 
 /* Light YouTube Embeds by @labnol on videos page */
 /* Web: http://labnol.org/?p=27941 */
