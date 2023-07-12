@@ -18,20 +18,11 @@ title: JAWA motorbikes vintage posters
     .grid__col-sizer
     .grid__gutter-sizer
     - vintage_posters = Dir.glob("source/images/posters/*.jpg")
-    - vintage_posters[143..148].each do |img|
+    - vintage_posters[149..154].each do |img|
       .grid__item
         = link_to "../images/posters/#{img.split('/').last}", data: { lightbox: 'vintage-posters', title: img.split('/').last().gsub('-', ' ').sub('.jpg','').capitalize.gsub(/jawa|Jawa/, 'JAWA')}
           = image_tag "posters/#{img.split('/').last}", class: 'image-grid__image', alt: img.split('/').last().gsub('-', ' ').sub('.jpg','').capitalize.gsub(/jawa|Jawa/, 'JAWA')
 
   = partial "vintage-posters/_page_load_status"
-
-  p.pagination.w-100
-    - if development?
-      a.pagination__next href="http://localhost:4567/vintage-posters/page-24/"
-        | Next page
-
-    - if build?
-      a.pagination__next href="https://jawaireland.ie/vintage-posters/page-24/"
-        | Next page
 
 .clearfix
