@@ -26,4 +26,11 @@ description: Jawa ireland motorbikes page containg collection of vintage posters
         | posters to display
 
 
+  .container
+    <div class="row single-event-grid" data-masonry='{"percentPosition": true }'>
+      - vintage_posters.each do |img|
+        .col-sm-6.col-lg-4.mb-4.text-center
+          = link_to "../images/posters/#{img.split('/').last}", data: { lightbox: 'vintage-posters', title: img.split('/').last().gsub('-', ' ').sub('.jpg','').capitalize.gsub(/jawa|Jawa/, 'JAWA')}
+            = image_tag "posters/#{img.split('/').last}", class: 'img-fluid lazy-loaded-image', alt: img.split('/').last().gsub('-', ' ').sub('.jpg','').capitalize.gsub(/jawa|Jawa/, 'JAWA'), loading: "lazy"
+    </div>
 .clearfix
