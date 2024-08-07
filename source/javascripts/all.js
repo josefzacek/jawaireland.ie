@@ -59,7 +59,15 @@ $( document ).ready(function() {
     });
   });
 
+  // masonry layout on posters page + lazy images loading
+  function reloadMansoryLayout(){
+    $("img.lazy-loaded-image").on('load', function() {
+      var mansoryGrid = new Masonry( '.single-event-grid');
+      mansoryGrid.reloadItems();
+    });
+  }
 
+  reloadMansoryLayout();
 
   // pop up on models page
   $(document).on('click', '[data-toggle="lightbox"]', function (event) {
