@@ -36,6 +36,12 @@ end
 #   end
 # end
 
+helpers do
+  def nav_active(path)
+    current_page.path.start_with?(path) ? 'text-primary' : ""
+  end
+end
+
 # activate Sprockets to compile js
 activate :sprockets
 

@@ -17,6 +17,7 @@ html lang="en"
     = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css'
     = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css'
     = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css'
+    = stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css'
     - if build?
       == stylesheet_link_tag  "https://jawaireland.ie/stylesheets/site.css"
     - else
@@ -45,15 +46,15 @@ html lang="en"
     = javascript_include_tag "https://use.fontawesome.com/e3837e8ec0.js"
     = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js"
     = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js'
-    = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/jquery-infinitescroll/3.0.3/infinite-scroll.pkgd.min.js"
-    = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.1/masonry.pkgd.min.js"
     = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.15.0/lazyload.min.js"
     = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"
-    = javascript_include_tag "https://www.google.com/recaptcha/api.js"
+    = javascript_include_tag "https://www.google.com/recaptcha/api.js", defer: true, async: true
+    = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+    = javascript_include_tag "https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"
     - if build?
       == javascript_include_tag  "https://jawaireland.ie/javascripts/all.js"
     - else
       == javascript_include_tag  "all"
 
     // https://instant.page
-    script src="//instant.page/1.2.1" type="module" integrity="sha384-/IkE5iZAM/RxPto8B0nvKlMzIyCWtYocF01PbGGp1qElJuxv9J4whdWBRtzZltWn"
+    = javascript_include_tag  "instantPage"

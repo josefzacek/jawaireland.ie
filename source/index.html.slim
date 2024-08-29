@@ -8,11 +8,17 @@ description: Welcome to Jawa Ireland, a site dedicated to JAWA motorbikes contai
   .video-wrapper
     .video-description.text-center
       h1.video-title
-        span Welcome to Jawa Ireland,
+        span
+          | Welcome to
+          b
+            span.text-primary<>
+              | JAWA
+          |Ireland,
         br
         span a site dedicated to
         br
-        span.text-primary JAWA
+        span.text-primary
+         b JAWA
         br
         span motorbikes
     .video-container
@@ -20,23 +26,190 @@ description: Welcome to Jawa Ireland, a site dedicated to JAWA motorbikes contai
         source src="images/jawa-rider.mp4" type="video/mp4"
         source src="images/jawa-rider.webm" type="video/webm"
 
-.container-fluid
-  .row
-    .col-lg-12
-      h2.text-center
-        | Do you need
+    .scroll-down-holder
+      span scroll
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="17.1819" cy="16.9095" r="15.8" transform="rotate(90 17.1819 16.9095)" stroke="black" stroke-width="1.91516"></circle>
+      </svg>
+      <svg class="arrow" width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.50648 15.7688C6.88044 16.1428 7.48675 16.1428 7.8607 15.7688L13.9547 9.67481C14.3286 9.30086 14.3286 8.69455 13.9547 8.32059C13.5807 7.94664 12.9744 7.94664 12.6005 8.32059L7.18359 13.7375L1.76672 8.32059C1.39276 7.94664 0.786456 7.94664 0.412498 8.32059C0.0385412 8.69455 0.0385412 9.30086 0.412498 9.67481L6.50648 15.7688ZM6.22602 0.728027L6.22602 15.0917L8.14117 15.0917L8.14117 0.728027L6.22602 0.728027Z" fill="black"></path>
+      </svg>
+
+.container
+  br
+  br
+  br
+  .row.position-relative
+    .col-md-8
+      = image_tag "home-page/JAWA-250-Duplex.png", alt: "JAWA 250 Duplex", loading:"lazy", class:"img-fluid mx-auto d-block border"
+    .col-md-6.p-3.p-md-4.p-lg-5.rounded.text-column-right
+      h2
         span.text-primary<>
           b JAWA
-        | spare parts?
+        | models
 
-      p.text-center
-        | Email:
-        = " "
-        = mail_to 'info@jawaireland.ie', "info@jawaireland.ie"
+      p
+        | See some past and currect
+        b.text-primary<> JAWA
+        | models ever made. Some models were exported to over 120 countries wordwide.
 
-        p.text-center
-          | Phone:
-          = " "
-          = link_to '+353 870525927', 'tel:+353870525927'
+      p
+        | The best known model was the 350 Pérák and in the 1970s the 350 Californian. The 350 Californian appeared in red and black colors making it a bit different from other
+        b.text-primary<> JAWA
+        | models.
 
-      p &nbsp;
+      u.float-right
+        = link_to "/models", class:"text-primary"
+          | See
+          b<> JAWA
+          | models
+
+  br
+  br
+  br
+  .row.position-relative
+    .col-md-6.p-3.p-md-4.p-lg-5.order-1.rounded.text-column-left
+      h2
+        span.text-primary<>
+          b JAWA
+        | videos
+
+      p
+        | Watch and hear the engine sound of your favourite
+        b.text-primary<> JAWA
+        | model like it's standing right in front of you.
+
+      p
+        | Make sure to check the design-modified motorcycle of the unified series called Bizon. This
+        b.text-primary<> JAWA
+        | model was manufactured between 1970 and 1972 mostly in yellow, red and black colors.
+
+      u.float-right
+        = link_to "/videos", class:"text-primary"
+          | Watch
+          b<> JAWA
+          | videos
+
+    .col-md-8.ml-md-auto
+      = image_tag "home-page/Yellow-JAWA-Bizon-350.png", alt: "Yellow JAWA Bizon 350", loading:"lazy", class:"img-fluid mx-auto d-block border"
+
+  br
+  br
+  br
+  .row.position-relative
+    .col-md-8
+      = image_tag "home-page/JAWA-350.png", alt: "JAWA 350", loading:"lazy", class:"img-fluid mx-auto d-block border"
+    .col-md-6.p-3.p-md-4.p-lg-5.rounded.text-column-right
+      h2
+        span.text-primary<>
+          b JAWA
+        | posters
+
+      p
+        | Don't forget to check out a posters page showcasing vintage
+        b.text-primary<> JAWA
+        | posters from all over the world.
+
+      p
+        | You never know, maybe there's one you remember from your childhood or maybe there's one that used to hang on your bedroom wall.
+
+      u.float-right
+        = link_to "/vintage-posters", class:"text-primary"
+          | Check out
+          b<> JAWA
+          | posters
+
+.container-fluid.mt-5
+  br
+  br
+  br
+  .row.bg-primary
+    .col.pt-5
+      .row.mt-3
+        .col-3
+        .col-6
+          = image_tag "home-page/JAWA-logo-white.svg", alt: "JAWA logo white", loading:"lazy", class:"img-fluid mx-auto d-block"
+        .col-3
+
+    .col-12.pb-5
+      h1.text-center.text-white.mt-5
+        b<> JAWA
+        | Ireland
+
+      p.text-center.text-white.mt-4.lead
+        | Looking for spare parts, advise or just chat about
+        b.h5<> JAWA
+        | motobikes?
+
+      p.text-center.text-white.mt-4.lead
+        | Great, I'll be delighted to hear from you
+
+      p.text-center.text-white.mt-4.lead
+        u
+          = link_to "/contact", class:"btn btn-lg btn-outline-light text-white get-in-touch-button"
+            | Get in touch
+
+.container
+  br
+  br
+  br
+  .row.position-relative
+    .col-md-6.p-3.p-md-4.p-lg-5.order-1.rounded.text-column-left
+      h2
+        span.text-primary<>
+          b JAWA
+        | spare parts
+
+      p
+        | Looking for
+        b.text-primary<> JAWA
+        | spare parts, manuals or some gift ideas?
+
+      p
+        | Visit our dedicated
+        b.text-primary<> JAWA
+        | shops page containg list of various shops ordered in alphabetical order selling
+        b.text-primary<> JAWA
+        | spare parts, new
+        b.text-primary<> JAWA
+        | motorbikes,
+        b.text-primary<> JAWA
+        | accessories,
+        b.text-primary<> JAWA
+        | manuals and other related materials.
+
+      u.float-right
+        = link_to "/shops", class:"text-primary"
+          | Shop
+          b<> JAWA
+          | parts
+
+    .col-md-8.ml-md-auto
+      = image_tag "home-page/JAWA-list-of-spare-parts.png", alt: "JAWA list of spare parts", loading:"lazy", class:"img-fluid mx-auto d-block border"
+
+  br
+  br
+  br
+  .row.position-relative.mb-5.pb-5
+    .col-md-8
+      = image_tag "home-page/JAWA-plant.png", alt: "JAWA plant", loading:"lazy", class:"img-fluid mx-auto d-block border"
+    .col-md-6.p-3.p-md-4.p-lg-5.rounded.text-column-right
+      h2
+        span.text-primary<>
+          b JAWA
+        | history timeline
+
+      p
+        | See important events in history of
+        b.text-primary<> JAWA
+        | from very beginning when Ing. František Janeček purchased a licence from Wanderer to produce a 500 OHV Wanderer motorbike.
+
+      p
+        | There is definitely something for every
+        b.text-primary<> JAWA
+        | enthusiastic.
+
+      u.float-right
+        = link_to "/history-timeline", class:"text-primary"
+          | Learn more about
+          b<> JAWA
