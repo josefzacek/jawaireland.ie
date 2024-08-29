@@ -37,7 +37,6 @@ title: Contact Jawa Ireland
     .col-lg-8
       = form_tag 'https://formcarry.com/s/DFeYKxhms5s_', :method => 'post', class: 'contact-form', id: 'contact-form' do
         - field_set_tag do
-          <input type="hidden" id="captchaResponse" name="g-recaptcha-response" />
           .form-group
             b
               = label_tag :name, class: 'label'
@@ -54,9 +53,9 @@ title: Contact Jawa Ireland
             b
               = label_tag :message, class: 'label'
             = text_area_tag :message, name: "Message", id: "message", placeholder: "Message", rows: 6, required: true, class: 'form-control'
-
           p.text-md-right
             small Please note all fields must be filled in before submitting the form
+          .g-recaptcha.d-flex.justify-content-end data-sitekey="6LfnsYgpAAAAAABl5CkA-x_gyReu8jDQm6yCdF7N"
 
           .row
             .col
