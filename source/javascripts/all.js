@@ -59,37 +59,15 @@ $( document ).ready(function() {
     });
   });
 
-  // init Masonry on vintage posters
-  var $grid = $('.masonry-grid').masonry({
-    itemSelector: 'none', // select none at first
-    columnWidth: '.grid__col-sizer',
-    gutter: '.grid__gutter-sizer',
-    percentPosition: true,
-    stagger: 30,
-    // nicer reveal transition
-    visibleStyle: { transform: 'translateY(0)', opacity: 1 },
-    hiddenStyle: { transform: 'translateY(100px)', opacity: 0 },
-  });
+  // masonry layout on posters page + lazy images loading
+  function reloadMansoryLayout(){
+    $("img.lazy-loaded-image").on('load', function() {
+      var mansoryGrid = new Masonry( '.single-event-grid');
+      mansoryGrid.reloadItems();
+    });
+  }
 
-  // get Masonry instance
-  var msnry = $grid.data('masonry');
-
-  // initial items reveal
-  $grid.imagesLoaded( function() {
-    $grid.removeClass('are-images-unloaded');
-    $grid.masonry( 'option', { itemSelector: '.grid__item' });
-    var $items = $grid.find('.grid__item');
-    $grid.masonry( 'appended', $items );
-  });
-
-  // init Infinte Scroll on vintage posters
-  $grid.infiniteScroll({
-    path: '.pagination__next',
-    append: '.grid__item',
-    outlayer: msnry,
-    status: '.page-load-status',
-    hideNav: '.pagination',
-  });
+  reloadMansoryLayout();
 
   // pop up on models page
   $(document).on('click', '[data-toggle="lightbox"]', function (event) {
@@ -155,3 +133,31 @@ var myLazyLoad = new LazyLoad({
   elements_selector: '.lazy-loaded-image',
   threshold: 200
 })
+
+// keyrings pagee slider
+$('.keyrings .slider').slick({
+  centerPadding: '30px',
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  dots: true,
+  prevArrow: $('.prev'),
+  nextArrow: $('.next'),
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        centerPadding: '20px',
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        centerPadding: '20px',
+        slidesToShow: 1,
+        dots: false
+      }
+    }
+  ]
+});

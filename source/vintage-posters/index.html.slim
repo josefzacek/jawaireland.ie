@@ -16,7 +16,7 @@ description: Jawa ireland motorbikes page containg collection of vintage posters
 
       p &nbsp;
 
-      - vintage_posters = Dir.glob("source/images/posters/*.jpg")
+      - vintage_posters = Dir.glob("source/images/posters/*")
 
       p
         | We have
@@ -25,23 +25,12 @@ description: Jawa ireland motorbikes page containg collection of vintage posters
           span.text-primary> JAWA
         | posters to display
 
-  .masonry-grid.are-images-unloaded
-    .grid__col-sizer
-    .grid__gutter-sizer
-    - vintage_posters[0..10].each do |img|
-      .grid__item
-        = link_to "../images/posters/#{img.split('/').last}", data: { lightbox: 'vintage-posters', title: img.split('/').last().gsub('-', ' ').sub('.jpg','').capitalize.gsub(/jawa|Jawa/, 'JAWA')}
-          = image_tag "posters/#{img.split('/').last}", class: 'image-grid__image', alt: img.split('/').last().gsub('-', ' ').sub('.jpg','').capitalize.gsub(/jawa|Jawa/, 'JAWA')
 
-  = partial "vintage-posters/_page_load_status"
-
-  p.pagination.w-100
-    - if development?
-      a.pagination__next href="http://localhost:4567/vintage-posters/page-1/"
-        | Next page
-
-    - if build?
-      a.pagination__next href="https://jawaireland.ie/vintage-posters/page-1/"
-        | Next page
-
+  .container
+    <div class="row single-event-grid" data-masonry='{"percentPosition": true }'>
+      - vintage_posters.each do |img|
+        .col-sm-6.col-lg-4.mb-4.text-center
+          = link_to "../images/posters/#{img.split('/').last}", data: { lightbox: 'vintage-posters', title: img.split('/').last().gsub('-', ' ').sub('.jpg','').sub('.webp','').capitalize.gsub(/jawa|Jawa/, 'JAWA')}
+            = image_tag "posters/#{img.split('/').last}", class: 'img-fluid lazy-loaded-image', alt: img.split('/').last().gsub('-', ' ').sub('.jpg','').sub('.webp','').capitalize.gsub(/jawa|Jawa/, 'JAWA'), loading: "lazy"
+    </div>
 .clearfix

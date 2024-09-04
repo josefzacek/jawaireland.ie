@@ -1,4 +1,4 @@
-nav.navbar.navbar-expand-md.navbar-light.border.border-primary.border-top-0.border-left-0.border-right-0
+nav.navbar.navbar-expand-lg.navbar-light.border.border-primary.border-top-0.border-left-0.border-right-0
   = link_to '/', class: 'navbar-brand' do
     = partial "layouts/jawa_logo"
 
@@ -8,18 +8,20 @@ nav.navbar.navbar-expand-md.navbar-light.border.border-primary.border-top-0.bord
   .collapse.navbar-collapse#mobile-navbar
     ul.navbar-nav.ml-auto
       li.nav-item
-        = link_to 'Home', '/' ,class: 'nav-link'
+        = link_to 'Home', '/', class: "nav-link #{ nav_active('index.html')}"
       li.nav-item
-        = link_to 'Models', '/models/' ,class: 'nav-link'
+        = link_to 'Models', '/models/', class: "nav-link #{ nav_active('models')}"
       li.nav-item
-        = link_to 'Videos', '/videos/' ,class: 'nav-link'
+        = link_to 'Videos', '/videos/', class: "nav-link #{ nav_active('videos')}"
       li.nav-item
-        = link_to 'Posters', '/vintage-posters/' ,class: 'nav-link'
+        = link_to 'Posters', '/vintage-posters/', class: "nav-link #{ nav_active('vintage-posters')}"
       li.nav-item
-        = link_to 'Shops', '/shops/' ,class: 'nav-link'
+        = link_to 'Shops', '/shops/', class: "nav-link #{ nav_active('shops')}"
       li.nav-item
-        = link_to 'History timeline', '/history-timeline/' ,class: 'nav-link'
+        = link_to 'History timeline', '/history-timeline/', class: "nav-link #{ nav_active('history-timeline')}"
+      li.nav-item
+        = link_to 'Keyrings', '/keyrings/', class: "nav-link #{ nav_active('keyrings')}"
       // li.nav-item
-      //   = link_to 'Factory', '/' ,class: 'nav-link'
+      //   = link_to 'Factory', '/factory', class: "nav-link #{ nav_active('factory')}"
       li.nav-item
-        = link_to 'Contact', '/contact/' ,class: 'nav-link'
+        = link_to 'Contact', '/contact/', class: "nav-link #{ nav_active('contact')}"
